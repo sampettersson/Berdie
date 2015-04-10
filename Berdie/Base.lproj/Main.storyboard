@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BV1-FR-VrT">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController storyboardIdentifier="GameViewController" id="BV1-FR-VrT" customClass="GameViewController" customModule="Berdie" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="maK-i9-Uhn"/>
+                        <viewControllerLayoutGuide type="bottom" id="khH-OB-KpY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.10196078431372549" green="0.83921568627450982" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <segue destination="VRB-q1-W9C" kind="presentation" identifier="credits" id="6Rx-d2-l76"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="297" y="356"/>
+        </scene>
+        <!--Credits View Controller-->
+        <scene sceneID="q7M-1X-1Jo">
+            <objects>
+                <viewController storyboardIdentifier="credits" id="VRB-q1-W9C" customClass="CreditsViewController" customModule="Berdie" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KHU-Lp-aza"/>
+                        <viewControllerLayoutGuide type="bottom" id="DHZ-Mh-hDG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qHA-AY-lAZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tP8-63-2dw">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="Lqd-ai-ZVD"/>
+                                    <constraint firstAttribute="height" constant="44" id="sP1-fe-9hd"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.098039215686274508" green="0.83921568627450982" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Credits" id="fBn-yb-iX8">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="stop" id="yZQ-Ji-J8d">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="CancelTapped:" destination="VRB-q1-W9C" id="bsj-dx-lw7"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFx-TN-rU7">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <string key="text">Sam Pettersson 
+Elia Nordström
+Linus Åkesson Rasmus Nilsson - GDD</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AK6-LQ-RtR">
+                                <rect key="frame" x="81" y="54" width="427" height="366"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="366" id="LmY-lf-YS7"/>
+                                    <constraint firstAttribute="width" constant="427" id="cmk-3u-J5o"/>
+                                </constraints>
+                                <string key="text">Sam Pettersson - Dev &amp; Art 
+With the help of:
+Elia Nordström, Linus Åkesson, 
+Rasmus Nilsson
+
+Background music by
+ Airtone, CC Attribution (3.0)
+
+Made with &lt;3 in Sweden</string>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SfQ-Zz-oqX">
+                                <rect key="frame" x="195" y="368" width="198" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="198" id="dpD-D2-2hL"/>
+                                    <constraint firstAttribute="height" constant="30" id="gUK-fG-TLY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="sampettersson.com">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="AuthorClick:" destination="VRB-q1-W9C" eventType="touchUpInside" id="igB-EU-Qdt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.10196078431372549" green="0.83921568627450982" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="SfQ-Zz-oqX" firstAttribute="top" secondItem="tP8-63-2dw" secondAttribute="bottom" constant="324" id="1ou-AQ-kBx"/>
+                            <constraint firstItem="tP8-63-2dw" firstAttribute="leading" secondItem="qHA-AY-lAZ" secondAttribute="leadingMargin" constant="-16" id="J2I-bD-WPP"/>
+                            <constraint firstItem="AK6-LQ-RtR" firstAttribute="top" secondItem="tP8-63-2dw" secondAttribute="bottom" constant="10" id="Nw4-Cv-Y4n"/>
+                            <constraint firstAttribute="centerX" secondItem="AK6-LQ-RtR" secondAttribute="centerX" constant="5.5" id="buE-ma-CcL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SfQ-Zz-oqX" secondAttribute="trailing" constant="191" id="h7U-mb-YjB"/>
+                            <constraint firstItem="tP8-63-2dw" firstAttribute="top" secondItem="KHU-Lp-aza" secondAttribute="bottom" id="heK-qN-Ntd"/>
+                            <constraint firstAttribute="centerX" secondItem="SfQ-Zz-oqX" secondAttribute="centerX" constant="6" id="q3U-ND-cZ7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tP8-63-2dw" secondAttribute="trailing" constant="-16" id="w7B-cR-W3H"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="NavBar" destination="tP8-63-2dw" id="Yvb-rn-iOD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mMp-mc-87h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-301" y="1020"/>
+        </scene>
+        <!--Game Store View Controller-->
+        <scene sceneID="vbA-d8-0Z0">
+            <objects>
+                <viewController storyboardIdentifier="GameStore" id="BXu-BT-tBf" customClass="GameStoreViewController" customModule="Berdie" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ltf-tu-BdO"/>
+                        <viewControllerLayoutGuide type="bottom" id="cxh-EY-2Xb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hir-PM-b9I">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="Z84-RW-tWI">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Game Store" id="ZHc-ES-M4V">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="OwF-1b-CAL">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="CloseClick:" destination="BXu-BT-tBf" id="vhy-ll-yDW"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="3N1-IF-IfN">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" shouldIndentWhileEditing="NO" reuseIdentifier="GameStoreCell" id="rEG-9M-7Dn" customClass="GameStoreCell" customModule="Berdie" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rEG-9M-7Dn" id="CT2-P5-0Jj">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g28-Px-OfO">
+                                                    <rect key="frame" x="16" y="12" width="20" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="20" id="LWS-6N-iSI"/>
+                                                        <constraint firstAttribute="height" constant="20" id="enM-Bn-xZt"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="mRP-8A-9wh"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdF-Q1-2tb">
+                                                    <rect key="frame" x="50" y="11" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="g28-Px-OfO" secondAttribute="bottom" constant="4" id="KdH-mD-yov"/>
+                                                <constraint firstItem="g28-Px-OfO" firstAttribute="top" secondItem="CT2-P5-0Jj" secondAttribute="topMargin" constant="4" id="Loz-9t-gmZ"/>
+                                                <constraint firstItem="g28-Px-OfO" firstAttribute="leading" secondItem="CT2-P5-0Jj" secondAttribute="leadingMargin" constant="7" id="QOz-N9-lh3"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="Image" destination="g28-Px-OfO" id="KHT-OY-NrA"/>
+                                            <outlet property="Title" destination="qdF-Q1-2tb" id="lHJ-Wq-MYD"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BXu-BT-tBf" id="oii-oh-VaQ"/>
+                                    <outlet property="delegate" destination="BXu-BT-tBf" id="WtU-IB-lAq"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="3N1-IF-IfN" secondAttribute="trailing" constant="-16" id="2dm-EN-9Lf"/>
+                            <constraint firstItem="3N1-IF-IfN" firstAttribute="top" secondItem="Z84-RW-tWI" secondAttribute="bottom" id="2jw-2y-XrF"/>
+                            <constraint firstItem="3N1-IF-IfN" firstAttribute="top" secondItem="Z84-RW-tWI" secondAttribute="bottom" id="3sp-E6-mcu"/>
+                            <constraint firstItem="cxh-EY-2Xb" firstAttribute="top" secondItem="3N1-IF-IfN" secondAttribute="bottom" id="6CV-ky-yqs"/>
+                            <constraint firstItem="3N1-IF-IfN" firstAttribute="leading" secondItem="Hir-PM-b9I" secondAttribute="leadingMargin" constant="-16" id="9Tm-0f-U2S"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Z84-RW-tWI" secondAttribute="trailing" constant="-16" id="EYD-3o-TQU"/>
+                            <constraint firstItem="Z84-RW-tWI" firstAttribute="top" secondItem="ltf-tu-BdO" secondAttribute="bottom" id="dYp-Er-yY5"/>
+                            <constraint firstItem="Z84-RW-tWI" firstAttribute="leading" secondItem="Hir-PM-b9I" secondAttribute="leadingMargin" constant="-16" id="sR7-MT-1OK"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="StoreItemsView" destination="3N1-IF-IfN" id="8Sa-vi-ygl"/>
+                        <outlet property="StoreNavigationBar" destination="Z84-RW-tWI" id="qW0-md-yhl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Tg-6D-1ML" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="366" y="1020"/>
+        </scene>
+        <!--Game Store Item View Controller-->
+        <scene sceneID="h44-nT-WzS">
+            <objects>
+                <viewController storyboardIdentifier="GameStoreItem" id="4Of-zQ-jyP" customClass="GameStoreItemViewController" customModule="Berdie" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w6E-Y1-uHU"/>
+                        <viewControllerLayoutGuide type="bottom" id="cib-Zv-8hJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4h9-bJ-EDu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="BcY-8B-QYl">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Item Name" id="YBQ-XR-EdC">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="HML-sd-n1v">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="GameStoreItemCloseClick:" destination="4Of-zQ-jyP" id="UgX-hc-XmL"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" enabled="NO" id="Al7-kD-ra6">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ep3-ol-HHJ">
+                                                <rect key="frame" x="539" y="9" width="45" height="27"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Buy">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BcY-8B-QYl" firstAttribute="top" secondItem="w6E-Y1-uHU" secondAttribute="bottom" id="MRX-3t-Kh0"/>
+                            <constraint firstItem="BcY-8B-QYl" firstAttribute="leading" secondItem="4h9-bJ-EDu" secondAttribute="leadingMargin" constant="-16" id="NST-cC-qDk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BcY-8B-QYl" secondAttribute="trailing" constant="-16" id="nlO-GD-VJJ"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="Buy" destination="Ep3-ol-HHJ" id="SY8-pR-EqP"/>
+                        <outlet property="GameStoreItemNavigationItem" destination="YBQ-XR-EdC" id="twa-3k-FlM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jxX-d1-3fl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1037" y="1020"/>
+        </scene>
+    </scenes>
+</document>
